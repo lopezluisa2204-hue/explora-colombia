@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- Fondo de toda la página ---------- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #26352d;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(10, 40, 25, 0.55) 0%, rgba(10, 40, 25, 0.75) 100%),
+    url("./assets/fondo.png") center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.contenedor {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+
+/* ---------- Portada ---------- */
+.portada {
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.titulo {
+  margin: 0;
+  color: white;
+  font-size: 46px;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
+}
+
+.subtitulo {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+}
+
+/* ---------- Tarjetas de vidrio ---------- */
+.formulario,
+.lista {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 28px;
+  margin-top: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  margin: 0 0 18px;
+  color: #176b45;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* ---------- Formulario ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 13px;
+  border: 1px solid #cfd8d3;
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+  color: #26352d;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #176b45;
+  box-shadow: 0 0 0 3px rgba(23, 107, 69, 0.2);
+}
+
+button {
+  padding: 13px;
+  background: #176b45;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #12573a;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ---------- Lista de destinos ---------- */
+.destino {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  background: white;
+  border-left: 5px solid #176b45;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.destino:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.destino h3 {
+  margin: 0 0 6px;
+  font-size: 19px;
+  color: #1d3b2c;
+}
+
+.destino p {
+  margin: 2px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.vacio {
+  text-align: center;
+  color: #777;
+  padding: 20px 0;
+}
+
+/* ---------- Botones de cada destino ---------- */
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eliminar {
+  background: #c0392b;
+  padding: 9px 16px;
+}
+
+.eliminar:hover {
+  background: #a93226;
+}
+
+.acciones .favorito {
+  background: none;
+  padding: 0;
+  font-size: 26px;
+  line-height: 1;
+  color: #cccccc;
+  transition: transform 0.15s, color 0.15s;
+}
+
+.acciones .favorito:hover {
+  background: none;
+  transform: scale(1.2);
+}
+
+.acciones .favorito:active {
+  transform: scale(0.9);
+}
+
+.acciones .favorito.activo {
+  color: #e74c3c;
+}
