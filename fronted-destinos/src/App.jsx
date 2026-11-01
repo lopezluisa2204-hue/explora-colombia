@@ -13,9 +13,7 @@ function App() {
     return guardados ? JSON.parse(guardados) : [];
   });
 
-  const API = 
-  import.meta.env.VITE_API_URL ||
-  "http://localhost:3000/api/destinos";
+    const API = import.meta.env.VITE_API_URL || "http://localhost:3000/api/destinos";
 
   // Consultar los destinos
   const cargarDestinos = async () => {
